@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "target": "wildbags-demo-backend",
     "public": "dist",
     "ignore": [
       "firebase.json",
