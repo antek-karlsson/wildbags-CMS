@@ -65,8 +65,8 @@ const productsCollection = buildCollection<Product>({
       dataType: 'string',
       description: 'Określ czy produkt ma być widoczny na stronie',
       enumValues: {
+        public: 'Widoczny',
         private: 'Ukryty',
-        public: 'Widoczny'
       }
     },
     images: buildProperty({
