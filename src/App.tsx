@@ -13,13 +13,13 @@ import 'typeface-rubik';
 import '@fontsource/ibm-plex-mono';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyClEJZb4_hwK5nTboWoQ2l72eLV1sVXIVY",
-  authDomain: "wildbags-demo-bundle-8267f.firebaseapp.com",
-  projectId: "wildbags-demo-bundle-8267f",
-  storageBucket: "wildbags-demo-bundle-8267f.appspot.com",
-  messagingSenderId: "387992033973",
-  appId: "1:387992033973:web:8c724ddfa56b4a200bbcfc"
-};
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+}
 
 type Product = {
   name: string;
@@ -141,6 +141,7 @@ export default function App() {
     []
   );
 
+  console.log(firebaseConfig);
   return (
     <FirebaseCMSApp
       name={'Wildbags'}
